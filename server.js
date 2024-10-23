@@ -29,7 +29,7 @@ app.get('/oauth2/callback', async (req, res) => {
     });
     
     // Redirect to the frontend with the token
-    // res.redirect(`${process.env.FRONTEND_URL}/?token=${response.data.access_token}`);
+    res.redirect(`${process.env.FRONTEND_URL}/?token=${response.data.access_token}`);
     res.send("hi this shyam");
   } catch (error) {
     console.error('Error getting token:', error.response ? error.response.data : error.message);
